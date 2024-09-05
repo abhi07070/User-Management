@@ -110,9 +110,10 @@ button[type="button"] {
 .user-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
+  height: calc(100vh - 200px);
 }
 .user-details .user-info {
   display: flex;
@@ -165,6 +166,31 @@ button[type="button"] {
   width: 20%;
   background-color: #ccc;
   border-radius: 4px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {

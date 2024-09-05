@@ -43,7 +43,7 @@ function UserList({ onDelete, onEdit }) {
                 ) : (
                     users.map(user => (
                         <div key={user.id} className="user-item">
-                            <h3>{user.name}</h3>
+                            <h3>Name: {user.name}</h3>
                             <p>Email: {user.email}</p>
                             <p>Phone: {user.phone}</p>
                             <div className="btn-group">

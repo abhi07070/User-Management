@@ -16,10 +16,15 @@ function UserDetailsPage() {
     }, [id]);
 
     if (error) return <div>{error}</div>;
-    if (!user) return <div>Loading...</div>;
+    if (!user) return (
+        <div className="spinner-container">
+            <div className="spinner"></div>
+        </div>
+    );
 
     return (
         <div className="user-details">
+            <h2>User Detail</h2>
             <div className="user-info">
                 <p>Name: {user.name}</p>
                 <p>Email: {user.email}</p>
